@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            Listas
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-card>
+        <ion-card-title>
+            Lista estatica 
+        </ion-card-title>
+        <ion-card-header>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam a nesciunt dignissimos distinctio. Qui, vero magni ullam nisi tenetur sint nemo quasi mollitia minima possimus dolor iusto consequatur! Corrupti, iure?
+        </ion-card-header>
+
+        <ion-list>
+            <ion-item>
+                <ion-label>Input</ion-label>
+                <ion-input placeholder="Escriba aquí"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>CheckBox</ion-label>
+                <ion-checkbox slot="end"></ion-checkbox>
+            </ion-item>
+            <ion-item>
+                <ion-label>Toggle</ion-label>
+                <ion-toggle slot="end"></ion-toggle>
+            </ion-item>
+            <ion-item>
+                <ion-label>Radio</ion-label>
+                <ion-radio slot="end"></ion-radio>
+            </ion-item>
+        </ion-list>
+    </ion-card>
+    <ion-card>
+        <ion-card-title>
+            Listas dinamicas (arreglos , typescript)
+        </ion-card-title>
+
+
+        <ion-list *ngFor="let Muestra of Lista">
+            <ion-item><ion-icon name="game-controller-outline" item-start color="{{Muestra.color}}"></ion-icon> 
+            {{Muestra.videojuego}}</ion-item>
+
+        </ion-list>
+
+    </ion-card>
+</ion-content>
+
