@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>FORMULARIO DE REGISTRO</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <ion-card>
+   <ion-card-header>
+     <ion-card-title>Complete el Formulario</ion-card-title>
+   </ion-card-header>
+   <ion-card-content>
+    <ion-list>
+      <ion-item>
+        <ion-label>Nombre:</ion-label>
+        <ion-input [(ngModel)]= "CampoNombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Apellido:</ion-label>
+        <ion-input [(ngModel)]= "CampoApellido"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Fecha de Nacimiento:</ion-label>
+        <ion-input type="date" [(ngModel)]= "fecha"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Correo:</ion-label>
+        <ion-input [(ngModel)]= "Campocorreo"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>N° Documento:</ion-label>
+        <ion-input type="number" [(ngModel)]= "Campocedula"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Teléfono:</ion-label>
+        <ion-input type="number" [(ngModel)]= "Campotelefono"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Dirección:</ion-label>
+        <ion-input [(ngModel)]= "Campodireccion"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Carrera:</ion-label>
+        <ion-select [(ngModel)]= "Campocarrera">
+          <ion-select-option>Ingenieria Industrial</ion-select-option>
+          <ion-select-option>Ingenieria en Telecomunicaciones</ion-select-option>
+          <ion-select-option>Ingenieria Mecatronica</ion-select-option>
+          <ion-select-option>Desarrollo del Software</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+   </ion-card-content>
+ </ion-card> 
+ <ion-button fill="outline" expand="block" color="tertiary" (click)= "Enviodatos()">ENVIAR</ion-button>
+ <ion-button fill="outline" expand="block" color="tertiary" (click)= "primerapag()">VOLVER</ion-button>
+</ion-content>
